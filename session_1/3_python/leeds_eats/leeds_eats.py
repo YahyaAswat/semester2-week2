@@ -5,7 +5,11 @@ import sqlite3
 # ==================================================
 
 def total_customers(conn):
-    pass
+    query = "SELECT COUNT(*) FROM customers"
+    cursor = conn.execute(query)
+    # print("Total number of customers: {}")
+    for row in cursor:
+        print(row)
 
 
 def customer_signup_range(conn):
